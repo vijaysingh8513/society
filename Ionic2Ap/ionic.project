@@ -1,0 +1,10 @@
+{
+  "name": "societyApp",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://52.38.177.138:4000/api/"
+    }
+  ]
+}
