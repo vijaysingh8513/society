@@ -2,13 +2,13 @@
 	'use strict';
 
 	angular
-		.module('societyApp.user-profile')
-		.controller('MeController', MeController);
+		.module('societyApp.guard-profile')
+		.controller('GuardController', GuardController);
 
-	MeController.$inject = ['$scope','$window','$ionicNavBarDelegate','menuItems'];
+	GuardController.$inject = ['$scope','$window','$ionicNavBarDelegate','menuItems'];
 
 	/* @ngInject */
-	function MeController($scope,$window,$ionicNavBarDelegate,menuItems) 
+	function GuardController($scope,$window,$ionicNavBarDelegate,menuItems) 
 	{
 	//	var vm = this;
 	//	vm.myDetails = $window.localStorage.username;

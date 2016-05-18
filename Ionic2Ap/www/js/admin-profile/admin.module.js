@@ -2,20 +2,20 @@
 	'use strict';
 
 	angular
-		.module('societyApp.user-profile', [
+		.module('societyApp.admin-profile', [
 			'ionic',
 			
 			
 		])
 		.config(function($stateProvider) {
 			$stateProvider
-				.state('app.user-profile', {
-					url: '/profile',
+				.state('app.admin_profile', {
+					url: '/adminprofile',
 					cache: false,
 					views: {
 						'menuContent': {
-							templateUrl: 'js/user-profile/me.html',
-							controller: 'MeController as vm'
+							templateUrl: 'js/admin-profile/admin.html',
+							controller: 'AdminController as vm'
 						}
 					}
 				})

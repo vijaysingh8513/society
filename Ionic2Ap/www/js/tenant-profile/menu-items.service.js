@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('societyApp.user-profile')
+		.module('societyApp.tenant-profile')
 		.factory('menuItems', menuItems);
 
 	menuItems.$inject = [];

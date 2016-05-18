@@ -35,15 +35,27 @@
 						var userobj = {};
 						userobj.role = response.results[0].role;
 						userobj.username = response.userName;
-                        
-                        if($window.localStorage.accesstoken == null)
+
+						if($window.localStorage.accesstoken == null)
                         {
                         	$window.localStorage.accesstoken = response.access_token;
                         }
 						
 						$window.localStorage.setItem('userobj', JSON.stringify(userobj));
 						
-						$state.go("app.user-profile");
+						if(userobj.role == "admin")
+						{
+							$state.go("app.admin_profile");
+						}
+						else if(userobj.role == "tenant")
+						{
+							$state.go("app.tenant_profile");
+						}
+						else if(userobj.role == "guard")
+						{
+							$state.go("app.guard_profile");
+						}
+                        
 
 					}
 					else if(status == 401)

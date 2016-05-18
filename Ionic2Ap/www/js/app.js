@@ -5,7 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic',
 'societyApp.login',
-'societyApp.user-profile',
+'societyApp.admin-profile',
+'societyApp.tenant-profile',
+'societyApp.guard-profile',
 'societyApp.menu',
 'ngCordova',
 'ngCordovaOauth'
