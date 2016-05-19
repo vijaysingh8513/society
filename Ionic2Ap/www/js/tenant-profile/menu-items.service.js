@@ -3,26 +3,31 @@
 
 	angular
 		.module('societyApp.tenant-profile')
-		.factory('menuItems', menuItems);
+		.factory('menuItemsTenant', menuItemsTenant);
 
-	menuItems.$inject = [];
+	menuItemsTenant.$inject = [];
 
 	/* @ngInject */
-	function menuItems() {
+	function menuItemsTenant() {
 		var data = [{
-			title: 'News',
+			title: 'Complaint Register',
 			path: 'articles',
 			icon: 'ion-speakerphone'
 		}, {
-			title: 'Products',
+			title: 'Society maintenance',
 			path: 'products-extended',
 			icon: 'ion-android-cart'
 		}, {
-			title: 'Galleries',
+			title: 'Request For Vendor Access',
 			path: 'galleries',
 			icon: 'ion-images'
 		}, {
-			title: 'Map',
+			title: 'Message Board',
+			path: 'map',
+			icon: 'ion-map'
+		},
+		{
+			title: 'Settings',
 			path: 'map',
 			icon: 'ion-map'
 		}];

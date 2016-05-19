@@ -5,10 +5,10 @@
 		.module('societyApp.guard-profile')
 		.controller('GuardController', GuardController);
 
-	GuardController.$inject = ['$scope','$window','$ionicNavBarDelegate','menuItems'];
+	GuardController.$inject = ['$scope','$window','$ionicNavBarDelegate','menuItemsGuard'];
 
 	/* @ngInject */
-	function GuardController($scope,$window,$ionicNavBarDelegate,menuItems) 
+	function GuardController($scope,$window,$ionicNavBarDelegate,menuItemsGuard) 
 	{
 	//	var vm = this;
 	//	vm.myDetails = $window.localStorage.username;
@@ -18,7 +18,7 @@
                         
        
 		var vm = angular.extend(this, {
-			entries: menuItems,
+			entries: menuItemsGuard,
 		    myDetails:parsedobj
 		});
 

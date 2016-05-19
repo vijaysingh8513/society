@@ -3,26 +3,26 @@
 
 	angular
 		.module('societyApp.admin-profile')
-		.factory('menuItems', menuItems);
+		.factory('menuItemsAdmin', menuItemsAdmin);
 
-	menuItems.$inject = [];
+	menuItemsAdmin.$inject = [];
 
 	/* @ngInject */
-	function menuItems() {
+	function menuItemsAdmin() {
 		var data = [{
-			title: 'News',
+			title: 'Society Complaints',
 			path: 'articles',
 			icon: 'ion-speakerphone'
 		}, {
-			title: 'Products',
+			title: 'Approval Requests',
 			path: 'products-extended',
 			icon: 'ion-android-cart'
 		}, {
-			title: 'Galleries',
+			title: 'Send Message to Members',
 			path: 'galleries',
 			icon: 'ion-images'
 		}, {
-			title: 'Map',
+			title: 'Message Board',
 			path: 'map',
 			icon: 'ion-map'
 		}];

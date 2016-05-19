@@ -5,10 +5,10 @@
 		.module('societyApp.admin-profile')
 		.controller('AdminController', AdminController);
 
-	AdminController.$inject = ['$scope','$window','$ionicNavBarDelegate','menuItems'];
+	AdminController.$inject = ['$scope','$window','$ionicNavBarDelegate','menuItemsAdmin'];
 
 	/* @ngInject */
-	function AdminController($scope,$window,$ionicNavBarDelegate,menuItems) 
+	function AdminController($scope,$window,$ionicNavBarDelegate,menuItemsAdmin) 
 	{
 	//	var vm = this;
 	//	vm.myDetails = $window.localStorage.username;
@@ -18,7 +18,7 @@
                         
        
 		var vm = angular.extend(this, {
-			entries: menuItems,
+			entries: menuItemsAdmin,
 		    myDetails:parsedobj
 		});
 

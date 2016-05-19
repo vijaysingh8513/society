@@ -14,14 +14,14 @@
 </div>
 <div ng-repeat="e in vm.entries" ng-if="$index%2==0" class="row">
 
-            <div class="card col home">
+            <div class="card col home" ng-if="vm.entries[$index].title !=''">
                 <a class="item item-text-wrap" href="#/app/{{vm.entries[$index].path}}">
                     <h1><i class="icon {{vm.entries[$index].icon}}"></i></h1>
                     <h2>{{vm.entries[$index].title}}</h2>
                 </a>
             </div>
 
-            <div class="card col home">
+            <div class="card col home" ng-if="vm.entries[$index + 1].title !=''">
                 <a class="item item-text-wrap" href="#/app/{{vm.entries[$index + 1].path}}">
                     <h1><i class="icon {{vm.entries[$index + 1].icon}}"></i></h1>
                     <h2>{{vm.entries[$index + 1].title}}</h2>

@@ -3,28 +3,20 @@
 
 	angular
 		.module('societyApp.guard-profile')
-		.factory('menuItems', menuItems);
+		.factory('menuItemsGuard', menuItemsGuard);
 
-	menuItems.$inject = [];
+	menuItemsGuard.$inject = [];
 
 	/* @ngInject */
-	function menuItems() {
+	function menuItemsGuard() {
 		var data = [{
-			title: 'News',
+			title: 'Request Access From Tenant ',
 			path: 'articles',
 			icon: 'ion-speakerphone'
 		}, {
-			title: 'Products',
+			title: 'Maid Attendance',
 			path: 'products-extended',
 			icon: 'ion-android-cart'
-		}, {
-			title: 'Galleries',
-			path: 'galleries',
-			icon: 'ion-images'
-		}, {
-			title: 'Map',
-			path: 'map',
-			icon: 'ion-map'
 		}];
 
 		return data;
