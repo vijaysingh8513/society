@@ -36,4 +36,9 @@ angular.module('starter', ['ionic',
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/login');
 })
+.config(function($ionicConfigProvider) 
+{
+  // Remove back button text completely
+  $ionicConfigProvider.backButton.previousTitleText(false).text('');
+})
 
