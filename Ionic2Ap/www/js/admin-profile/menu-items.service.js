@@ -11,7 +11,7 @@
 	function menuItemsAdmin() {
 		var data = [{
 			title: 'Society Complaints',
-			path: 'articles',
+			path: 'subadminprofile',
 			icon: 'ion-speakerphone'
 		}, {
 			title: 'Approval Requests',
