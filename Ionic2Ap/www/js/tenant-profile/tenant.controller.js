@@ -13,7 +13,7 @@
 	//	var vm = this;
 	//	vm.myDetails = $window.localStorage.username;
 	
-	 $ionicNavBarDelegate.showBackButton(false);
+	 
 	var objval = $window.localStorage.getItem('userobj');
 	var parsedobj = JSON.parse(objval)
                         
@@ -24,7 +24,7 @@
 		});
 
 
-console.log(vm.entries);
+
 vm.title = "Welcome "+vm.myDetails.username+" !";
 		
 	}

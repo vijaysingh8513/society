@@ -9,15 +9,13 @@
 		])
 		.config(function($stateProvider) {
 			$stateProvider
-				.state('app.login', {
+				.state('login', {
 					url: '/login',
 					cache: false,
-					views: {
-						'menuContent': {
-							templateUrl: 'js/login/login.html',
-							controller: 'LoginController as vm'
-						}
-					}
+							
+					templateUrl: 'js/login/login.html',
+					controller: 'LoginController as vm'
+						
 				})
 				
 		});
