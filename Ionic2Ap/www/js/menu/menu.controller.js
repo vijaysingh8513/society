@@ -5,10 +5,20 @@
 		.module('societyApp.menu')
 		.controller('MenuController', MenuController);
 
-	MenuController.$inject = [];
+	MenuController.$inject = ['$window','$location'];
 
 	/* @ngInject */
-	function MenuController() {
+	function MenuController($window,$location,$timeout) 
+	{
 
+		var vm = this;
+		vm.logout = function logout()
+		{
+			
+			$window.localStorage.accesstoken = null;
+
+			$location.path('/login');  
+    
+		}
 	}
 })();

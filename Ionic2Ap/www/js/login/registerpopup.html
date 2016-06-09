@@ -1,0 +1,26 @@
+<ion-modal-view class="ion-nifty-modal">
+  <div class="ion-modal-content-custom">
+    <ion-content class="padding">
+    <form ng-submit="onRegisterSubmit()" id="formregister">
+    <div class="register" >
+     
+      <div class="formholder">
+        <div class="randompad">
+           
+             <label name="email">Email</label>
+             <input type="text" value="1234" style="width:96%; border-radius:4px;" ng-model="loginForm.username" />
+             <label name="password">Password</label>
+             <input type="password" ng-model="vm.registerForm.password"/>
+             <label name="cnfpassword">Confirm-Password</label>
+             <input type="password" ng-model="vm.registerForm.cnfpassword"/>
+             <input type="submit" value="Register" class="form-submit-button"  />
+ 
+           
+        </div>
+      </div>
+    </div>
+  </form>
+  
+    </ion-content>
+  </div>
+</ion-modal-view>

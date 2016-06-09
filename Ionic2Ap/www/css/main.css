@@ -7719,7 +7719,7 @@ button.item.item-button-right {
  */
 .list {
   position: relative;
-  padding-top: 1px;
+  padding-top: 40px;
   padding-bottom: 1px;
   padding-left: 0;
   margin-bottom: 20px;
@@ -11333,6 +11333,23 @@ td-card img {
   opacity: 0;
 }
 
+.form-submit-button {
+
+background: #0066A2;
+
+color: white;
+
+border-style: outset;
+
+border-color: #0066A2;
+
+height: 50px;
+
+width: 100px;
+
+font: bold 15px arial, sans-serif;
+
+}
 .fade {
   transition: 0.2s opacity linear;
   opacity: 0;

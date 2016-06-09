@@ -1,28 +1,43 @@
 <ion-view view-title="Home">
 	<ion-content>
-	<div class="home-hello">
-			<img src="http://lorempixel.com/1024/768/"/>
+  
+	<!--div class="home-hello">
+			<img src="img/banner.jpg"/>
 			<div class="item item-text-wrap">
 				<h1>ABC Corp Inc.</h1>
 				50 Market Street, San Francisco, California 94103, United States
 			</div>
-		</div>
+		</div>-->
+    <div>
+    <ion-slide-box does-continue="true" auto-play="true" show-pager="false" >
+          <ion-slide ng-repeat="slide in vm.images">
+               <div class="home-hello">
+               <img src="img/{{slide}}" height="{{vm.bannerHeight}}" />
+               
+               </div>
+             </ion-slide>
+    </ion-slide-box>
 
-<div id="wrap">
+ </div>
+<div style="bottom:0;  position: fixed; width:100%;">
+    <span style="float:left; width:50%;   opacity: 0.7;" class="button button-balanced" ng-click="vm.openPopup('sign-in')">Sign IN</span><span style="float:right; width:50%;  opacity: 0.7;" class="button button-positive" ng-click="vm.openPopup('sign-up')">Sign Up</span>
+    </div>
+    
+<!--div id="wrap">
   <div id="regbar">
-    <div id="navthing">
-      <h2><a href="#" id="loginform" ng-click="vm.onLogin()">Login</a> | <a href="#" id="registerForm" ng-click="vm.onRegister()">Register</a> </h2>
-	 <form ng-submit="vm.onLoginSubmit()" id="formlogin" >
+    <div id="">
+      <h2><a href="#" id="loginform" ng-click="vm.onLogin()">Login</a> | <a href="#" id="registerForm" ng-click="vm.onRegister()">Register</a> </h2>-->
+	 <!--form ng-submit="vm.onLoginSubmit()" id="formlogin"  >
     <div class="login">
       <div class="arrow-up"></div>
       <div class="formholder">
         <div class="randompad">
            <fieldset>
-             <label name="email">Email</label>
+             <label name="email">Username</label>
              <input type="text" style="width:96%; border-radius:4px;" ng-model="vm.loginForm.username" />
              <label name="password">Password</label>
              <input type="password" ng-model="vm.loginForm.password"/>
-             <input type="submit" value="Login" />
+             <input type="submit" value="Login" class="form-submit-button" />
  
            </fieldset>
         </div>
@@ -41,7 +56,7 @@
              <input type="password" ng-model="vm.registerForm.password"/>
              <label name="cnfpassword">Confirm-Password</label>
              <input type="password" ng-model="vm.registerForm.cnfpassword"/>
-             <input type="submit" value="Register" />
+             <input type="submit" value="Register" class="form-submit-button"  />
  
            </fieldset>
         </div>
@@ -52,7 +67,7 @@
   <div class="servererror" id="servererror">Something wrong at server. Try again later</div>
     </div>
   </div>
-</div>
+</div>-->
 
 		<!--
 		 | http://stackoverflow.com/questions/27239735/ionic-framwork-gridlayout-with-multiple-rows-and-column-on-which-buttons-placed

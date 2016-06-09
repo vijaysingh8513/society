@@ -31,10 +31,31 @@ angular.module('starter', ['ionic',
     }
   });
 })
-.config(function($urlRouterProvider, $compileProvider) {
+.config(function($urlRouterProvider, $compileProvider, $httpProvider) {
 	$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|blob|cdvfile|content):|data:image\//);
 	// if none of the above states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/login');
+
+  $httpProvider.interceptors.push(['$q', '$location', '$window', function($q, $location, $window) {
+            return {
+                'request': function (config) {
+                    config.headers = config.headers || {};
+                    if ($window.localStorage.accesstoken) {
+                        config.headers.Authorization = 'Bearer ' + $window.localStorage.accesstoken;
+
+                    }
+                   
+                    return config;
+                },
+                'responseError': function(response) {
+                    if(response.status === 401 || response.status === 403) {
+                        $location.path('/signin');
+                    }
+                    return $q.reject(response);
+                }
+            };
+        }]);
+
 })
 .config(function($ionicConfigProvider) 
 {

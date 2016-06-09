@@ -1,0 +1,23 @@
+<ion-modal-view class="ion-nifty-modal">
+  <div class="ion-modal-content-custom">
+    <ion-content class="padding">
+    <form ng-submit="login()" id="formlogin">
+      <div class="login">
+      
+      <div class="formholder">
+        <div class="randompad">
+           
+             <label name="email">Username</label>
+             <input type="text" style="width:96%; border-radius:4px;" ng-model="loginForm.username" />
+             <label name="password">Password</label>
+             <input type="password" ng-model="loginForm.password"/>
+             <input type="submit" value="Login" class="form-submit-button" />
+ 
+           
+        </div>
+      </div>
+    </div>
+    </form>
+    </ion-content>
+  </div>
+</ion-modal-view>

@@ -21,7 +21,7 @@
 				})
 				.state('app.subadmin_profile', {
 					url: '/subadminprofile',
-					cache: false,
+					
 					views: {
 						'menuContent': {
 							templateUrl: 'js/admin-profile/sub-admin/sub-admin.html',
