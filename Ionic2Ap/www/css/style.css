@@ -138,6 +138,9 @@ font: bold 15px arial, sans-serif;
 }
 
 .randompad {
+  padding: 12%;
+}
+.randompad1 {
   padding: 10px;
 }
 
@@ -195,17 +198,4 @@ a:hover {
   background-color: #ccc;
   display:flex;
   flex-direction:row;
-}
-.adic-modal .modal {
-    min-height: 0 !important;
-   
-}
-.adic-popup {
-    width: 60%;
-    height: 50%;
-    top: 50px;
-    bottom: 20%;
-    right: 5%;
-    left: 5%;
-    background-color: #ffffff;
 }
